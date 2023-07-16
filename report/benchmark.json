@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2023-07-16T02:04:31-03:00",
+    "date": "2023-07-16T02:09:57-03:00",
     "host_name": "operador-3-15IMH05",
     "executable": "/home/operador/Dev/unioeste/graph_flows/build/linux/x86_64/release/bench",
     "num_cpus": 8,
@@ -32,13 +32,359 @@
         "num_sharing": 8
       }
     ],
-    "load_avg": [0.472656,0.664551,0.672363],
+    "load_avg": [1.18262,0.370605,0.129883],
     "library_build_type": "release"
+  },
+  "BM_Ford_Fulkerson": {
+    "10": {
+      "max_flow": 141,
+      "paths": 10
+    },
+    "25": {
+      "max_flow": 272,
+      "paths": 35
+    },
+    "50": {
+      "max_flow": 590,
+      "paths": 77
+    },
+    "75": {
+      "max_flow": 1102,
+      "paths": 130
+    },
+    "100": {
+      "max_flow": 1472,
+      "paths": 167
+    },
+    "150": {
+      "max_flow": 2033,
+      "paths": 236
+    },
+    "200": {
+      "max_flow": 2825,
+      "paths": 343
+    },
+    "250": {
+      "max_flow": 3448,
+      "paths": 447
+    },
+    "300": {
+      "max_flow": 4453,
+      "paths": 538
+    },
+    "400": {
+      "max_flow": 5764,
+      "paths": 722
+    },
+    "500": {
+      "max_flow": 7076,
+      "paths": 886
+    },
+    "650": {
+      "max_flow": 9719,
+      "paths": 1177
+    },
+    "800": {
+      "max_flow": 11739,
+      "paths": 1417
+    },
+    "1000": {
+      "max_flow": 15213,
+      "paths": 1821
+    },
+    "1500": {
+      "max_flow": 22185,
+      "paths": 2695
+    }
+  },
+  "BM_Push_Relable": {
+    "10": {
+      "max_flow": 141
+    },
+    "25": {
+      "max_flow": 272
+    },
+    "50": {
+      "max_flow": 590
+    },
+    "75": {
+      "max_flow": 1102
+    },
+    "100": {
+      "max_flow": 1472
+    },
+    "150": {
+      "max_flow": 2033
+    },
+    "200": {
+      "max_flow": 2825
+    },
+    "250": {
+      "max_flow": 3448
+    },
+    "300": {
+      "max_flow": 4453
+    },
+    "400": {
+      "max_flow": 5764
+    },
+    "500": {
+      "max_flow": 7076
+    },
+    "650": {
+      "max_flow": 9719
+    },
+    "800": {
+      "max_flow": 11739
+    },
+    "1000": {
+      "max_flow": 15213
+    },
+    "1500": {
+      "max_flow": 22185
+    }
   },
   "benchmarks": [
     {
-      "name": "BM_Push_Relable/10",
+      "name": "BM_Ford_Fulkerson/10",
       "family_index": 0,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Ford_Fulkerson/10",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 4028608,
+      "real_time": 1.6982555612260882e+02,
+      "cpu_time": 1.6966409141817724e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/25",
+      "family_index": 0,
+      "per_family_instance_index": 1,
+      "run_name": "BM_Ford_Fulkerson/25",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 7015385,
+      "real_time": 9.7705139774935830e+01,
+      "cpu_time": 9.7620346424323074e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/50",
+      "family_index": 0,
+      "per_family_instance_index": 2,
+      "run_name": "BM_Ford_Fulkerson/50",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 5350906,
+      "real_time": 1.2979300738977696e+02,
+      "cpu_time": 1.2965510625677226e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/75",
+      "family_index": 0,
+      "per_family_instance_index": 3,
+      "run_name": "BM_Ford_Fulkerson/75",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 101401,
+      "real_time": 6.5775774893737707e+03,
+      "cpu_time": 6.5717014526483963e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/100",
+      "family_index": 0,
+      "per_family_instance_index": 4,
+      "run_name": "BM_Ford_Fulkerson/100",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 57352,
+      "real_time": 1.1543301593667351e+04,
+      "cpu_time": 1.1533979128888275e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/150",
+      "family_index": 0,
+      "per_family_instance_index": 5,
+      "run_name": "BM_Ford_Fulkerson/150",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 25042,
+      "real_time": 2.7730114327929019e+04,
+      "cpu_time": 2.7707372454276814e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/200",
+      "family_index": 0,
+      "per_family_instance_index": 6,
+      "run_name": "BM_Ford_Fulkerson/200",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1997358,
+      "real_time": 3.4903156169299319e+02,
+      "cpu_time": 3.4877654531636290e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/250",
+      "family_index": 0,
+      "per_family_instance_index": 7,
+      "run_name": "BM_Ford_Fulkerson/250",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 8003,
+      "real_time": 7.3894592527801884e+04,
+      "cpu_time": 7.3839931525677792e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/300",
+      "family_index": 0,
+      "per_family_instance_index": 8,
+      "run_name": "BM_Ford_Fulkerson/300",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 957072,
+      "real_time": 5.4138616321446966e+02,
+      "cpu_time": 5.4092372778641595e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/400",
+      "family_index": 0,
+      "per_family_instance_index": 9,
+      "run_name": "BM_Ford_Fulkerson/400",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 816668,
+      "real_time": 7.3495429599299166e+02,
+      "cpu_time": 7.3450485754309011e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/500",
+      "family_index": 0,
+      "per_family_instance_index": 10,
+      "run_name": "BM_Ford_Fulkerson/500",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1921,
+      "real_time": 3.2571674544508447e+05,
+      "cpu_time": 3.2550745288912032e+05,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/650",
+      "family_index": 0,
+      "per_family_instance_index": 11,
+      "run_name": "BM_Ford_Fulkerson/650",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 494,
+      "real_time": 1.1552995971659978e+06,
+      "cpu_time": 1.1546290627530357e+06,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/800",
+      "family_index": 0,
+      "per_family_instance_index": 12,
+      "run_name": "BM_Ford_Fulkerson/800",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 29707,
+      "real_time": 1.7125085266098693e+04,
+      "cpu_time": 1.7119399232504165e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/1000",
+      "family_index": 0,
+      "per_family_instance_index": 13,
+      "run_name": "BM_Ford_Fulkerson/1000",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 1.3055410580000029e+09,
+      "cpu_time": 1.3050283000000000e+09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson/1500",
+      "family_index": 0,
+      "per_family_instance_index": 14,
+      "run_name": "BM_Ford_Fulkerson/1500",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 4.1612264210000091e+09,
+      "cpu_time": 4.1596889760000019e+09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson_BigO",
+      "family_index": 0,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Ford_Fulkerson",
+      "run_type": "aggregate",
+      "repetitions": 1,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "aggregate_unit": "time",
+      "cpu_coefficient": 3.6442241373627418e+08,
+      "real_coefficient": 3.6455915924730349e+08,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Ford_Fulkerson_RMS",
+      "family_index": 0,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Ford_Fulkerson",
+      "run_type": "aggregate",
+      "repetitions": 1,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "aggregate_unit": "percentage",
+      "rms": 2.9224913545032476e+00
+    },
+    {
+      "name": "BM_Push_Relable/10",
+      "family_index": 1,
       "per_family_instance_index": 0,
       "run_name": "BM_Push_Relable/10",
       "run_type": "iteration",
@@ -46,27 +392,27 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 10000,
-      "real_time": 2.2491260940005301e+05,
-      "cpu_time": 2.2440458590000001e+05,
+      "real_time": 1.5739352930000052e+05,
+      "cpu_time": 1.5734427100000018e+05,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/25",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 1,
       "run_name": "BM_Push_Relable/25",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2079,
-      "real_time": 6.9594321837348328e+05,
-      "cpu_time": 6.9592680423280422e+05,
+      "iterations": 4113,
+      "real_time": 7.5608107488451374e+05,
+      "cpu_time": 7.5583628300510580e+05,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/50",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 2,
       "run_name": "BM_Push_Relable/50",
       "run_type": "iteration",
@@ -74,55 +420,55 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1000,
-      "real_time": 9.4422447599936265e+05,
-      "cpu_time": 9.4182747300000000e+05,
+      "real_time": 7.2084973900000192e+05,
+      "cpu_time": 7.2056780299999437e+05,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/75",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 3,
       "run_name": "BM_Push_Relable/75",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 671,
-      "real_time": 2.3011770804768158e+06,
-      "cpu_time": 2.2969274053651276e+06,
+      "iterations": 949,
+      "real_time": 2.0716465173867291e+06,
+      "cpu_time": 2.0708457133825140e+06,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/100",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 4,
       "run_name": "BM_Push_Relable/100",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 283,
-      "real_time": 2.5964394840920903e+06,
-      "cpu_time": 2.5963832049469957e+06,
+      "iterations": 452,
+      "real_time": 2.3411302831858373e+06,
+      "cpu_time": 2.3405628230088502e+06,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/150",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 5,
       "run_name": "BM_Push_Relable/150",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 31,
-      "real_time": 1.6320048419372816e+07,
-      "cpu_time": 1.6317315129032260e+07,
+      "iterations": 77,
+      "real_time": 6.9451311558441669e+06,
+      "cpu_time": 6.9432956103895921e+06,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/200",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 6,
       "run_name": "BM_Push_Relable/200",
       "run_type": "iteration",
@@ -130,13 +476,13 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 10,
-      "real_time": 1.4488121319991478e+08,
-      "cpu_time": 1.4460080939999998e+08,
+      "real_time": 1.1067224130000000e+08,
+      "cpu_time": 1.1064409999999967e+08,
       "time_unit": "ns"
     },
     {
       "name": "BM_Push_Relable/250",
-      "family_index": 0,
+      "family_index": 1,
       "per_family_instance_index": 7,
       "run_name": "BM_Push_Relable/250",
       "run_type": "iteration",
@@ -144,7 +490,134 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 3.1848926109996681e+09,
-      "cpu_time": 3.1764853130000005e+09,
+      "real_time": 2.4358889170000000e+09,
+      "cpu_time": 2.4351520369999948e+09,
       "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/300",
+      "family_index": 1,
+      "per_family_instance_index": 8,
+      "run_name": "BM_Push_Relable/300",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 5,
+      "real_time": 1.0699790149999985e+09,
+      "cpu_time": 1.0697920060000002e+09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/400",
+      "family_index": 1,
+      "per_family_instance_index": 9,
+      "run_name": "BM_Push_Relable/400",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 2,
+      "real_time": 8.0766118865000038e+09,
+      "cpu_time": 8.0820046134999971e+09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/500",
+      "family_index": 1,
+      "per_family_instance_index": 10,
+      "run_name": "BM_Push_Relable/500",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 3.7474958251000008e+10,
+      "cpu_time": 3.7484304480999992e+10,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/650",
+      "family_index": 1,
+      "per_family_instance_index": 11,
+      "run_name": "BM_Push_Relable/650",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 1.1136172045500002e+11,
+      "cpu_time": 1.1136026182900002e+11,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/800",
+      "family_index": 1,
+      "per_family_instance_index": 12,
+      "run_name": "BM_Push_Relable/800",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 3.7862299680000434e+09,
+      "cpu_time": 3.7859453920000019e+09,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/1000",
+      "family_index": 1,
+      "per_family_instance_index": 13,
+      "run_name": "BM_Push_Relable/1000",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 1.3886962836000010e+10,
+      "cpu_time": 1.3884658803999998e+10,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable/1500",
+      "family_index": 1,
+      "per_family_instance_index": 14,
+      "run_name": "BM_Push_Relable/1500",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1,
+      "real_time": 7.5785537516000031e+10,
+      "cpu_time": 7.5779194112000031e+10,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable_BigO",
+      "family_index": 1,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Push_Relable",
+      "run_type": "aggregate",
+      "repetitions": 1,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "aggregate_unit": "time",
+      "cpu_coefficient": 1.6933663055133585e+10,
+      "real_coefficient": 1.6933436887873314e+10,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Push_Relable_RMS",
+      "family_index": 1,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Push_Relable",
+      "run_type": "aggregate",
+      "repetitions": 1,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "aggregate_unit": "percentage",
+      "rms": 1.8999694332729669e+00
     }
+  ]
+}
