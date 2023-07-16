@@ -53,6 +53,9 @@ class PushRelabelGraph {
 public:
   PushRelabelGraph(int V);  // Constructor
 
+  // Get the number of vertices in the graph
+  int getNumVertices() { return V; }
+
   // function to add an edge to graph
   void addEdge(int u, int v, int w);
 

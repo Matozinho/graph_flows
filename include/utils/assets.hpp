@@ -12,6 +12,7 @@
 #include <regex>
 #include <string>
 #include <vector>
+#include "graph/push_relabel_graph.hpp"
 
 namespace utils::assets {
   inline std::vector<int32_t> get_size_of_assets(const std::string& path) {
@@ -39,7 +40,6 @@ namespace utils::assets {
   }
 
   inline Graph* get_graph_from_file(std::string fileName) {
-    fmt::print("Reading file: {}\n", fileName);
     std::ifstream inputFile(fileName);
 
     if (!inputFile.is_open()) throw std::runtime_error("Unable to open file");
@@ -76,6 +76,43 @@ namespace utils::assets {
     return g;
   }
 
+  inline PushRelabelGraph* get_push_relabel_graph_from_file(std::string fileName) {
+    std::ifstream inputFile(fileName);
+
+    if (!inputFile.is_open()) throw std::runtime_error("Unable to open file");
+
+    std::string graph_size;
+    getline(inputFile, graph_size);
+
+    std::string line;
+    std::vector<std::string> numbers;
+
+    while (getline(inputFile, line)) {
+      numbers.push_back(line);
+    }
+
+    inputFile.close();
+
+    // Create a graph with the size read from the file
+    PushRelabelGraph* g = new PushRelabelGraph(std::stoi(graph_size));
+
+    for (int i = 0; i < numbers.size(); i++) {
+      std::istringstream iss(numbers[i]);
+      std::string number;
+      int j = 0;
+
+      while (iss >> number) {
+        int value = std::stoi(number);
+        if (value > 0) {
+          g->addEdge(i, j, value);
+        }
+        j++;
+      }
+    }
+
+    return g;
+  }
+
   template <typename R, typename... Args> std::function<R(Args...)> memo(R (*fn)(Args...)) {
     std::map<std::tuple<Args...>, R> table;
     return [fn, table](Args... args) mutable -> R {
@@ -91,24 +128,24 @@ namespace utils::assets {
     };
   }
 
-  inline std::vector<int32_t> get_params_from_file(std::string fileName) {
-    std::ifstream inputFile(fileName);
-
-    if (!inputFile.is_open()) throw std::runtime_error("Unable to open file");
-
-    std::string line;
-    std::vector<int32_t> numbers;
-
-    while (getline(inputFile, line)) {
-      std::istringstream lineStream(line);
-      int number;
-      while (lineStream >> number) {
-        numbers.push_back(number);
-      }
-    }
-
-    inputFile.close();
-
-    return numbers;
-  }
+  // inline std::vector<int32_t> get_params_from_file(std::string fileName) {
+  //   std::ifstream inputFile(fileName);
+  //
+  //   if (!inputFile.is_open()) throw std::runtime_error("Unable to open file");
+  //
+  //   std::string line;
+  //   std::vector<int32_t> numbers;
+  //
+  //   while (getline(inputFile, line)) {
+  //     std::istringstream lineStream(line);
+  //     int number;
+  //     while (lineStream >> number) {
+  //       numbers.push_back(number);
+  //     }
+  //   }
+  //
+  //   inputFile.close();
+  //
+  //   return numbers;
+  // }
 }  // namespace utils::assets

@@ -42,7 +42,7 @@ namespace flow {
     return false;
   }
 
-  std::pair<int, int> fordFulkerson(Graph& graph, int begin_vertex, int target_vertex) {
+  std::pair<int, int> ford_fulkerson(Graph& graph, int begin_vertex, int target_vertex) {
     int maxFlow = 0;
     int paths = 0;
 

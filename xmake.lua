@@ -5,7 +5,7 @@ set_xmakever("2.7.0")
 set_languages("c++20")
 add_rules("mode.debug", "mode.release")
 
-local libs = { "fmt", "gtest" }
+local libs = { "fmt", "gtest", "benchmark" }
 
 add_includedirs("include")
 add_requires(table.unpack(libs))
@@ -26,6 +26,12 @@ target("test")
   add_files("test/*.cpp")
   add_packages(table.unpack(libs))
   add_deps("graphs-flow-lib")
+
+target("bench")
+  set_kind("binary")
+  add_files("benchmark/main.cpp")
+  add_deps("graphs-flow-lib")
+  add_packages(table.unpack(libs))
 
 add_installfiles("(include/**)", {prefixdir = ""})
 

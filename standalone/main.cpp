@@ -63,8 +63,8 @@ auto main() -> int {
   // fmt::print("BFS max flow: {} | with {} paths\n", maxFlow, foundPaths);
   // fmt::print("Push-Relabel max flow: {}\n", pushRelabelResult);
 
-  int V = 7;
-  PushRelabelGraph push_relabel_graph(V);
+  // int V = 7;
+  // PushRelabelGraph push_relabel_graph(V);
   // Graph graph(7);
   // populate_graph(graph);
 
@@ -82,27 +82,36 @@ auto main() -> int {
   // }
 
   // Creating above shown flow network
-  push_relabel_graph.addEdge(0, 1, 3);
-  push_relabel_graph.addEdge(0, 2, 3);
-  push_relabel_graph.addEdge(0, 3, 4);
+  // push_relabel_graph.addEdge(0, 1, 3);
+  // push_relabel_graph.addEdge(0, 2, 3);
+  // push_relabel_graph.addEdge(0, 3, 4);
+  //
+  // push_relabel_graph.addEdge(1, 4, 2);
+  //
+  // push_relabel_graph.addEdge(2, 1, 10);
+  // push_relabel_graph.addEdge(2, 4, 1);
+  //
+  // push_relabel_graph.addEdge(3, 5, 5);
+  //
+  // push_relabel_graph.addEdge(4, 3, 1);
+  // push_relabel_graph.addEdge(4, 5, 1);
+  // push_relabel_graph.addEdge(4, 6, 2);
+  //
+  // push_relabel_graph.addEdge(5, 6, 5);
+  //
+  // // Initialize source and sink
+  // int s = 0, t = 5;
+  //
+  // fmt::print("Maximum flow is {}\n", push_relabel_graph.getMaxFlow(s, t));
 
-  push_relabel_graph.addEdge(1, 4, 2);
+  Graph* g = utils::assets::get_graph_from_file("assets/test/1.txt");
+  PushRelabelGraph* prg = utils::assets::get_push_relabel_graph_from_file("assets/test/1.txt");
 
-  push_relabel_graph.addEdge(2, 1, 10);
-  push_relabel_graph.addEdge(2, 4, 1);
+  std::pair<int, int> ff_max_flow = flow::ford_fulkerson(*g, 0, g->getNumVertices() - 1);
+  fmt::print("Maximum flow is {} using {} paths\n", ff_max_flow.first, ff_max_flow.second);
 
-  push_relabel_graph.addEdge(3, 5, 5);
-
-  push_relabel_graph.addEdge(4, 3, 1);
-  push_relabel_graph.addEdge(4, 5, 1);
-  push_relabel_graph.addEdge(4, 6, 2);
-
-  push_relabel_graph.addEdge(5, 6, 5);
-
-  // Initialize source and sink
-  int s = 0, t = 5;
-
-  fmt::print("Maximum flow is {}\n", push_relabel_graph.getMaxFlow(s, t));
+  int pr_max_flow = prg->getMaxFlow(0, prg->getNumVertices() - 1);
+  fmt::print("Maximum flow is {}\n", pr_max_flow);
 
   return 0;
 }

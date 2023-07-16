@@ -127,10 +127,11 @@ int PushRelabelGraph::getMaxFlow(int s, int t) {
   preflow(s);
 
   // loop until none of the Vertex is in overflow
-  while (overFlowVertex(ver) != -1) {
-    int u = overFlowVertex(ver);
+  int u = overFlowVertex(ver);
+  while (u != -1) {
     bool pushed = push(u);
     if (!pushed) relabel(u);
+    u = overFlowVertex(ver);
   }
 
   // ver.back() returns last Vertex, whose
